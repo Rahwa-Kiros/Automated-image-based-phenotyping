@@ -56,11 +56,17 @@ class MultiPlantWorkflow:
             # Analyze the shape of each plant 
             pcv.analyze.size(img=rotate_img, labeled_mask=labeled_mask, n_labels=num_plants, label="plant")
 
-            # Analyze color
-            pcv.analyze.color(rgb_img=rotate_img, labeled_mask=labeled_mask, n_labels=num_plants, colorspaces="HSV")
+            # # Analyze color
+            # pcv.analyze.color(rgb_img=rotate_img, labeled_mask=labeled_mask, n_labels=num_plants, colorspaces="HSV")
 
+            # # Save results in JSON format
+            # result = pcv.outputs.save_results(filename=f"{self.result}_{image_file}", outformat='json')
+
+            # # Append the result to the list
+            # self.results_list.append(result)
             # Save results in JSON format
-            result = pcv.outputs.save_results(filename=f"{self.result}_{image_file}", outformat='json')
+            result_filename = os.path.join(self.outdir, f"{self.result}_{image_file}.json")  # Full path with outdir
+            result = pcv.outputs.save_results(filename=result_filename, outformat='json')
 
             # Append the result to the list
             self.results_list.append(result)
@@ -95,7 +101,7 @@ class MultiPlantWorkflow:
 #     args = parse_arguments()
 
 #     # Create an instance of PlantCVWorkflow with the parsed arguments
-#     workflow = multi_plantworkflow(
+#     workflow = MultiPlantWorkflow(
 #         input_dir=args.input_dir,
 #         result=args.result,
 #         outdir=args.outdir,
