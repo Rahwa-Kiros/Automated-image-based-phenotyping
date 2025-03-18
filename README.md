@@ -10,7 +10,9 @@ pandas: Data manipulation library. numpy: Numerical computation library. argpars
 ## python scripts
 
 #### image_cropper.py
-This script utilizes the PlantCV library to crop image for further analyses. the class in the scripet is import to the main function to run unsig srguments.
+This script utilizes the PlantCV library to crop image for further analyses.
+To run the code open teminal and execure the following command
+##### "python <script_name>"
 
 #### multi_plantworkflow.py
 This script utilizes PlantCV, a Python library designed for multi plant image analysis, to process images in a specified directory. It performs tasks such as thresholding, masking, and size analysis. Results are saved in JSON format for each processed image.
