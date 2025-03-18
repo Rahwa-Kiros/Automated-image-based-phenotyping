@@ -36,7 +36,7 @@ To run this script, open the terminal and execute the following command:
     2. json_data_processing.ipynb : process the json data obtained from multi_plantworkflow.
 
 
-## To run the Jupyter Notebook files above, open each file in a Jupyter Notebook environment and execute cells sequentially by selecting a cell and clicking the run button or running all cells simultaneously.
+#### To run the Jupyter Notebook files above, open each file in a Jupyter Notebook environment and execute cells sequentially by selecting a cell and clicking the run button or running all cells simultaneously.
 
 ## Additional Considerations:
 Python Version Compatibility
